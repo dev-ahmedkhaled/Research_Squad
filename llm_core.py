@@ -1,10 +1,10 @@
 from langchain_ollama import ChatOllama
 
 class LLM():
-    def __init__(self):
+    def __init__(self, model="qwen3.5:9b", reasoning=False):
         self.llm= ChatOllama(
-            model="qwen3.5:9b",
-            reasoning=False
+            model=model,
+            reasoning=reasoning
         )
 
     def generate_response(self, prompt: str) -> str:
